@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'mom2k18/base/css/cultural.css'%}">
+<div class="slider" id="slider"> 
+  <div class="slider__content" id="slider-content">
+    <div class="slider__images">
+      <div class="slider__images-item slider__images-item--active" data-id="1"><img src="{% static 'mom2k18/images/cr.jpg' %}"/></div>
+      <div class="slider__images-item" data-id="2"><img src="{% static 'mom2k18/images/cb.jpg' %}"/></div>
+      <div class="slider__images-item" data-id="3"><img src="{% static 'mom2k18/images/th.jpg' %}"/></div>
+      <div class="slider__images-item" data-id="4"><img src="{% static 'mom2k18/images/ds.jpg' %}"/></div>
+      <div class="slider__images-item" data-id="5"><img src="{% static 'mom2k18/images/wl.jpg' %}"/></div>
+     <div class="slider__images-item" data-id="6"><img src="{% static 'mom2k18/images/tr.jpg' %}"/></div>
+    </div>
+    <div class="slider__text">
+      <div class="slider__text-item slider__text-item--active" data-id="1">
+        <div class="slider__text-item-head">
+          <h3>Creations</h3>
+        </div>
+        <div class="slider__text-item-info">
+           <p>"A picture is worth more than a thousand words." Can you encapsulate everything you see, hear and feel in a single creation of yours?<br>
+           	Entry fees: Rs.100 per head<br>
+Prizes: Worth Rs.5,000/-</p>
+        </div>
+      </div>
+      <div class="slider__text-item" data-id="2">
+        <div class="slider__text-item-head">
+          <h3>Cinebinge</h3>
+        </div>
+        <div class="slider__text-item-info">
+          <p>All the modern era sherlocks, brace yourselves, because you'll soon need to revisit your mind palace.MOM 2K18 brings you CineBinge which will put your grey cells to work.<br>
+<i>Just a tip: Don't be Jon snow.</i><br>
+<i>The east wind is coming.</i><br>
+Entry fees: Rs.100 per team <br>
+Prizes: Worth Rs.4,000/-</p>
+        </div>
+      </div>
+      <div class="slider__text-item" data-id="3">
+        <div class="slider__text-item-head">
+          <h3>Treasure Hunt</h3>
+        </div>
+        <div class="slider__text-item-info">
+          <p>Treasure Hunt will involve finding sneaky interactive clues who have been hidden throughout our institute campus. Make a good fortune out of this treasure hunt.<br>
+Entry fees: Rs.100 per team<br>
+Prize: Worth Rs.3,000/-
+</p>
+        </div>
+      </div>
+      <div class="slider__text-item" data-id="4">
+        <div class="slider__text-item-head">
+          <h3>Dub2Smash</h3>
+        </div>
+        <div class="slider__text-item-info">
+          <p>MoM 2k18 brings to you this opportunity of showcasing your expertise in this online contest and get to win exciting prizes.<br>
+Entry Fees: No entry fees(online event)<br>
+Prizes: Worth Rs.2,500/-<br>
+        </div>
+      </div>
+      <div class="slider__text-item" data-id="5">
+        <div class="slider__text-item-head">
+          <h3>Word-Lab</h3>
+        </div>
+        <div class="slider__text-item-info">
+          <p>“Word-Lab” where you can bring your self-composed quotes, poems and songs .It is an opportunity for all the creative writers out there to showcase their talent in innovative writing.<br>
+Entry fees: No entry fees (online event)<br>
+Prizes: Worth Rs.5,000/-</p>
+        </div>
+      </div>
+      <div class="slider__text-item" data-id="6">
+        <div class="slider__text-item-head">
+          <h3>World of Trollcraft</h3>
+        </div>
+        <div class="slider__text-item-info">
+          <p>Create an original meme and post it here. Let's see if it's funny enough to make everyone burst with laughter. The meme with the most potatoes gets a prize! <br>
+What are you waiting for, Let the Trolls begin.<br>
+Entry fees: No entry fees (online event)<br>
+Prizes: Worth Rs.2,500/-</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider__nav">
+    <div class="slider__nav-arrows">
+      <div class="slider__nav-arrow slider__nav-arrow--left" id="left">to left</div>
+      <div class="slider__nav-arrow slider__nav-arrow--right" id="right">to right</div>
+    </div>
+    <div class="slider__nav-dots" id="slider-dots">
+      <div class="slider__nav-dot slider__nav-dot--active" data-id="1"></div>
+      <div class="slider__nav-dot" data-id="2"></div>
+      <div class="slider__nav-dot" data-id="3"></div>
+      <div class="slider__nav-dot" data-id="4"></div>
+      <div class="slider__nav-dot" data-id="5"></div>
+      <div class="slider__nav-dot" data-id="6"></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="{% static 'mom2k18/base/js/cultural.js' %}"></script>
+{%endblock%}

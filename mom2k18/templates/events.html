@@ -1,0 +1,326 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Events | mom2k18</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<!-- Latest compiled and minified CSS -->
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'mom2k18/images/nc-fav.png' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'mom2k18/base/css/mod.css'%}">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Raleway+Dots" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'mom2k18/base/css/slider.css'%}">
+</head>
+<body>
+	<style type="text/css">
+		@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top-color: rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top-color: rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+  * {
+  box-sizing: border-box;
+}
+
+.loader1 {
+  position:absolute;
+  top:calc(50% - 75px);
+  left:calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden;
+}
+.loader1 div {
+  height: 100%;
+}
+
+.loader4, .loader4 div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+          animation: rotate linear 3.5s infinite;
+  border-radius: 50%;
+  padding: 4px;
+  -webkit-animation: rotate2 4s infinite linear;
+          animation: rotate2 4s infinite linear;
+}
+
+.loader1, .loader1 * {
+  will-change: transform;
+}
+
+
+div:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.spinner-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(200,200,200,1);
+z-index: 999999;
+}
+	</style>
+	<div class="spinner-wrapper">
+        <div class='loader1 loader4'>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+	<div class="overlay-navigation">
+		<nav role="navigation"  ">
+			<ul>
+				<li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'home' %}" data-content="The beginning">Home</a></li>
+                <li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'about' %}" data-content="Curious?">About</a></li>
+                <li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'message' %}" data-content="">Message</a></li>
+                <li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'events' %}" data-content="Only the finest">Events</a></li>
+                <li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'cultural' %}" data-content="Only the finest">Cultural</a></li>
+                <li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'gallery' %}" data-content="Don't hesitate">Gallery</a></li>
+                <li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'team' %}" data-content="c1">Team</a></li>
+                <li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'register' %}" data-content="c2">Register</a></li>
+                <li><a style="font-size: 1em; line-height:1.2em; " href="{% url 'sponsors' %}" data-content="c3">Sponsors</a></li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<section class="home">
+		<div class="open-overlay">
+			<span class="bar-top"></span>
+			<span class="bar-middle"></span>
+			<span class="bar-bottom"></span>
+		</div>
+	</section>
+	<div class="header" id="top">
+						<h1>Formal Events</h1>
+							<a href="#bottom" class="scrollTo"><i class="fa fa-angle-down animated bounce"></i></a>
+						</div>
+
+	<div class="section animate">
+		<div class="middle">
+			<img src="{% static 'mom2k18/images/modelexpo.jpg'%}"/>
+		</div>
+		<div class="left title">
+			<div class="content">
+				<h2>Model Expo</h2>
+				<p>“Every once in a while, a new technology, an old problem, and a big
+					idea turns into an innovation. “</p>
+					<a href="{% url 'tme' %}" class="btn-primary">Learn more</a>
+				</div>
+			</div>
+			<div class="right tiles">
+				<img src="{% static 'mom2k18/images/ME_1.jpg'%}" />
+				<img src="{% static 'mom2k18/images/ME_2.jpg'%}" />
+				<img src="{% static 'mom2k18/images/ME_3.jpg'%}" />
+				<img src="{% static 'mom2k18/images/ME_4.jpg'%}" />
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="middle">
+				<img src="{% static 'mom2k18/images/mad.jpg'%}" />
+			</div>
+			<div class="right title">
+				<div class="content">
+					<h2>MAD (Mobile Application Development)</h2>
+					<p>"Apps these days are an implacable element of an individual’s life."
+						MOM2k18
+						gives a platform to all the app developers to participate and emblazon their
+						app development skills, promote and contest with your app based on our
+						theme.</p>
+						<a href="{% url 'mad' %}" class="btn-primary">Learn more</a>
+					</div>
+				</div>
+
+				<div class="left tiles">
+					<img src="{% static 'mom2k18/images/19.jpg'%}" />
+					<img src="{% static 'mom2k18/images/20.jpg'%}" />
+					<img src="{% static 'mom2k18/images/6.jpg'%}" />
+					<img src="{% static 'mom2k18/images/8.jpg'%}" />
+				</div>
+
+			</div>
+
+			<div class="section">
+				<div class="middle">
+					<img src="{% static 'mom2k18/images/brainwave.jpg'%}" />
+				</div>
+				<div class="left title">
+					<div class="content">
+						<h2>BrainWave</h2>
+						<p>“A speaker should approach his preparation not by what he wants
+							to say, but by what he wants to learn”.</p>
+							<a href="{% url 'brainwave' %}" class="btn-primary">Learn more</a>
+						</div>
+					</div>
+
+					<div class="right tiles">
+						<img src="{% static 'mom2k18/images/BWave_1.jpg'%}" />
+						<img src="{% static 'mom2k18/images/BWave_2.jpg'%}" />
+						<img src="{% static 'mom2k18/images/BWave_3.jpg'%}" />
+						<img src="{% static 'mom2k18/images/BWave_4.jpg'%}" />
+					</div>
+
+				</div>
+
+				<div class="section">
+					<div class="middle">
+						<img src="{% static 'mom2k18/images/examen.jpg'%}"/>
+					</div>
+					<div class="right title">
+						<div class="content">
+							<h2>Examen : The Quiz</h2>
+							<p>“The only thing between you and glory is a cracker of an answer.”</p>
+							<a href="{% url 'quiz' %}" class="btn-primary">Learn more</a>
+						</div>
+					</div>
+
+					<div class="left tiles">
+						<img src="{% static 'mom2k18/images/Q_1.jpg'%}" />
+						<img src="{% static 'mom2k18/images/Q_2.jpg'%}" />
+						<img src="{% static 'mom2k18/images/Q_3.jpg'%}" />
+						<img src="{% static 'mom2k18/images/Q_4.jpg'%}" />
+					</div>
+
+				</div>
+				<div class="section animate">
+					<div class="middle">
+						<img src="{% static 'mom2k18/images/bandwar.jpg'%}" />
+					</div>
+					<div class="left title">
+						<div class="content">
+							<h1>BAND WARS</h1>
+							<p>MOM this year brings to you one of its most glamorous events that will ignite
+								your souls and your hearts will synchronize to the beats.</p>
+								<a href="{% url 'bandwars' %}" class="btn-primary">Learn more</a>
+							</div>
+						</div>
+						<div class="right tiles">
+							<img src="{% static 'mom2k18/images/BW_1.jpg'%}" />
+							<img src="{% static 'mom2k18/images/BW_2.jpg'%}" />
+							<img src="{% static 'mom2k18/images/BW_3.jpg'%}" />
+							<img src="{% static 'mom2k18/images/BW_4.jpg'%}" />
+						</div>
+					</div>
+					<div class="section">
+						<div class="middle">
+							<img src="{% static 'mom2k18/images/rangmanch.jpg'%}"/>
+						</div>
+						<div class="right title">
+							<div class="content">
+								<h1>Rangmanch</h1>
+								<p>“The stage is not merely the meeting place of all the arts but is also the return
+									of art to life. “</p>
+									<a href="{% url 'rangmanch' %}" class="btn-primary">Learn more</a>
+								</div>
+							</div>
+
+							<div class="left tiles">
+								<img src="{% static 'mom2k18/images/RM_1.jpg'%}" />
+								<img src="{% static 'mom2k18/images/RM_2.jpg'%}" />
+								<img src="{% static 'mom2k18/images/RM_3.jpg'%}" />
+								<img src="{% static 'mom2k18/images/RM_4.jpg'%}" />
+							</div>
+
+						</div>
+						<div class="footer" id="bottom">
+							<a href="#top" class="scrollTo"><i class="fa fa-angle-up animated bounce"></i></a>
+							<h1>Scroll Up</h1>
+						</div>
+						<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js"></script>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.js"></script>
+						<script type="text/javascript" src="{% static 'mom2k18/base/js/mod.js'%}"></script>
+						<script type="text/javascript">
+							$(document).ready(function() {
+ 							   $(window).load(function() {
+ 							   $('.spinner-wrapper').delay(1000).fadeOut(1500);
+ 							   });
+ 							 });
+						</script>
+						<script type="text/javascript" src="{% static 'mom2k18/base/js/slider.js'%}"></script>
+					</body>
+					</html>

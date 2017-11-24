@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <center><input type="submit" value="Submit" /></center>
+</form>

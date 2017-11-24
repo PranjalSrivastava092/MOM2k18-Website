@@ -1,0 +1,205 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Raleway+Dots" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'mom2k18/base/css/mod.css'%}">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'mom2k18/images/nc-fav.png' %}">
+  <title>{{title}}</title>
+  {% block head%}
+  {% endblock%}
+</head>
+<body>
+  <style type="text/css">
+  @-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top-color: rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    border-top-color: rgba(0, 0, 255, 0.5);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    border-top-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+  * {
+  box-sizing: border-box;
+}
+
+.loader1 {
+  position:absolute;
+  top:calc(50% - 75px);
+  left:calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+  display: block;
+  overflow: hidden;
+}
+.loader1 div {
+  height: 100%;
+}
+
+.loader4, .loader4 div {
+  border-radius: 50%;
+  padding: 8px;
+  border: 2px solid transparent;
+  -webkit-animation: rotate linear 3.5s infinite;
+          animation: rotate linear 3.5s infinite;
+  border-radius: 50%;
+  padding: 4px;
+  -webkit-animation: rotate2 4s infinite linear;
+          animation: rotate2 4s infinite linear;
+}
+
+.loader1, .loader1 * {
+  will-change: transform;
+}
+
+
+div:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.spinner-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(220,220,220,1);
+z-index: 999999;
+}
+
+ </style>
+
+<div class="spinner-wrapper spinner-wrapper2">
+<div class='loader1 loader4'>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    <div class="overlay-navigation">
+      <nav role="navigation">
+        <ul class="nav_links">
+                <li><a href="{% url 'home' %}" data-content="The beginning">Home</a></li>
+                <li><a href="{% url 'about' %}" data-content="Curious?">About</a></li>
+                <li><a href="{% url 'message' %}" data-content="The words">Message</a></li>
+                <li><a href="{% url 'events' %}" data-content="Where you win!">Events</a></li>
+                <li><a href="{% url 'cultural' %}" data-content="FUN!">Cultural</a></li>
+                <li><a href="{% url 'gallery' %}" data-content="The memories">Gallery</a></li>
+                <li><a href="{% url 'team' %}" data-content="Who make it possible">Team</a></li>
+                <li><a href="{% url 'register' %}" data-content="Join in">Register</a></li>
+                <li><a href="{% url 'sponsors' %}" data-content="Be on our side">Sponsors</a></li>
+        </ul>
+  </nav>
+
+</div>
+
+<section class="home">
+    <div class="open-overlay">
+        <span class="bar-top"></span>
+        <span class="bar-middle"></span>
+        <span class="bar-bottom"></span>
+    </div>
+</section>
+
+
+
+    {% block content%}
+    {% endblock %}
+
+
+
+   
+
+</body>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(window).load(function() {
+    $('.spinner-wrapper').delay(1000).fadeOut(1500);
+
+    });
+  });
+</script>
+<script type="text/javascript" src="{% static 'mom2k18/base/js/mod.js'%}"></script>
+ {% block javascript%}
+  {% endblock%}
+</body>
