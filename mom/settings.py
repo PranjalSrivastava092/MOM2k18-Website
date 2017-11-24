@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'm*nsrwshrb%mvwam8qte)28@oe%aqi89&t_-sx^x3%1(h2v*=g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 import dj_database_url
 DATABASES = {
