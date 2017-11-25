@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-
+import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,10 +25,10 @@ SECRET_KEY = 'm*nsrwshrb%mvwam8qte)28@oe%aqi89&t_-sx^x3%1(h2v*=g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-import dj_database_url
-DATABASES = {
-	'default' : dj_database_url.config(default='postgres://localhost')
-}
+db_config = dj_database_url.config()
+if db_config:
+	DATABASE['default']=db_config
+
 	
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
 	
