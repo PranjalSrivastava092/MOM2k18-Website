@@ -25,9 +25,16 @@ SECRET_KEY = 'm*nsrwshrb%mvwam8qte)28@oe%aqi89&t_-sx^x3%1(h2v*=g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-db_config = dj_database_url.config()
-if db_config:
-	DATABASE['default']=db_config
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'example_db',                     
+        'USER': 'pranjalsri092',
+        'PASSWORD': 'mindovermatter',
+        'HOST': '139.59.40.24', # Or something like this
+        'PORT': '5432',                     
+    }
+}
 
 	
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
