@@ -47,7 +47,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
 	
 ALLOWED_HOSTS = ['*']
 	
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_ROOT = '/var/www/MOM2k18-Website/'
 STATIC_URL = '/static/'
 
 
