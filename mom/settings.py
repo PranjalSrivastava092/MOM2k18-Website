@@ -12,10 +12,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import dj_database_url
-<<<<<<< HEAD
 
-=======
->>>>>>> 38532a99cd053dc724b7c12fb481f033e55a00b4
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -29,12 +26,11 @@ SECRET_KEY = 'm*nsrwshrb%mvwam8qte)28@oe%aqi89&t_-sx^x3%1(h2v*=g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
+
 db_config = dj_database_url.config()
 if db_config:
 	DATABASES['default'] = db_config
 
-=======
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
@@ -47,7 +43,6 @@ DATABASES = {
 }
 
 	
->>>>>>> 38532a99cd053dc724b7c12fb481f033e55a00b4
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
 	
 ALLOWED_HOSTS = ['*']
