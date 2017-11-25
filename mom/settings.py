@@ -37,7 +37,7 @@ if db_config:
 =======
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'example_db',                     
         'USER': 'root',
         'PASSWORD': 'mindovermatter',
